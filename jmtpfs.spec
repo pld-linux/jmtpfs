@@ -1,13 +1,12 @@
 Summary:	FUSE based MTP filesystem
 Name:		jmtpfs
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	GPL v3
 Group:		Applications/System
-Source0:	http://research.jacquette.com/wp-content/uploads/2012/05/%{name}-%{version}.tar.gz
-# Source0-md5:	e6bcade86da701a5d2b6f6bbc9b24e39
-Patch0:		gcc.patch
-URL:		http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/
+Source0:	https://github.com/JasonFerrara/jmtpfs/archive/v%{version}.tar.gz
+# Source0-md5:	501e51530d3c04d63e9ac96d794bf5c5
+URL:		https://github.com/JasonFerrara/jmtpfs
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libfuse-devel
@@ -21,7 +20,6 @@ Storage.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__aclocal}
